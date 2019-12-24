@@ -37,7 +37,10 @@
     "react-native-linear-gradient": "^2.5.6",
     "react-native-root-siblings": "^4.0.6",
     "react-native-scrollable-tab-view": "^1.0.0",
-    "react-native-sortable-listview": "^0.2.9"
+    "react-native-sortable-listview": "^0.2.9",
+    "react-navigation": "^4.0.10",
+    "react-navigation-stack": "^1.10.3",
+    "react-navigation-tabs": "^2.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
@@ -63,9 +66,6 @@
     "react-native-gesture-handler": "^1.5.2",
     "react-native-reanimated": "^1.4.0",
     "react-native-screens": "^1.0.0-alpha.23",
-    "react-navigation": "^4.0.10",
-    "react-navigation-stack": "^1.10.3",
-    "react-navigation-tabs": "^2.6.2",
     "react-test-renderer": "16.9.0"
   },
   "jest": {
