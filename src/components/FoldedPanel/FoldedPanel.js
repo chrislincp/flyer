@@ -5,14 +5,13 @@ import Touch from '../Touch'
 import Image from '../Image'
 import Text from '../Text'
 import styles from './styles'
-import { Style } from '../../themes'
 
-const FoldedPanel = ({ title, children }) => {
+const FoldedPanel = ({ title, titleStyle, children }) => {
   const [collapsed, toggle] = useState(false)
   return (
     <Fragment>
       <Touch onPress={() => toggle(!collapsed)} style={styles.collapsedHeader}>
-        <Text style={Style.subTitle}>{title}</Text>
+        {typeof title === 'string' ? <Text style={titleStyle}>{title}</Text> : title}
         <Image
           source={require('../../assets/images/right_arrow.png')}
           style={{
@@ -29,11 +28,13 @@ const FoldedPanel = ({ title, children }) => {
 }
 FoldedPanel.defaultProps = {
   title: '',
+  titleStyle: null,
   children: null,
 }
 
 FoldedPanel.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+  titleStyle: PropTypes.any,
   children: PropTypes.node,
 }
 

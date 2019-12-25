@@ -239,7 +239,8 @@ export interface DragListProps {
   renderRow?(): void;
 }
 export interface FoldedPanelProps {
-  title?: string;
+  title?: string | React.ReactNode;
+  titleStyle?: any;
   children?: React.ReactNode;
 }
 
