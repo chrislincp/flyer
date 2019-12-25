@@ -7,6 +7,7 @@ import {
   CarouselPage,
   DialogPage,
   DragListPage,
+  FoldedPanelPage,
   FormPage,
 } from '../views/components'
 
@@ -18,6 +19,7 @@ const components = {
   CarouselPage,
   DialogPage,
   DragListPage,
+  FoldedPanelPage,
   FormPage,
 }
 const routes = {

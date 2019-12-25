@@ -14,6 +14,7 @@ export default class Home extends Page {
         { title: 'Dialog', path: 'DialogPage' },
         { title: 'DragList', path: 'DragListPage' },
         { title: 'Form', path: 'FormPage' },
+        { title: 'FoldedPanel', path: 'FoldedPanelPage' },
         { title: 'Modal', path: 'ModalPage' },
         { title: 'PopMenu', path: 'PopMenuPage' },
         { title: 'Popup', path: 'PopupPage' },

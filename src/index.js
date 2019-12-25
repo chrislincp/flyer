@@ -54,6 +54,7 @@ import {
   ifAndroid,
   ifIphoneX,
 } from './utils'
+import Router from './router'
 
 export {
   ActionSheet,
@@ -109,4 +110,5 @@ export {
   isIphoneX,
   ifAndroid,
   ifIphoneX,
+  Router,
 }

@@ -658,3 +658,13 @@ export function ifIphoneX(
   iphoneXStyle?: any, 
   otherStyle?: any,
 )
+
+export class Router {
+  static setRouters?(routers: any[], navigation: any): void;
+  static navigate?(routeName: string, params?: object): void;
+  static push?(routeName: string, params?: object): void;
+  static pop?(routeNameOrStepsNum?: string | number | null | undefined): void;
+  static popToTop?(): void;
+  static replace?(routeName: string, params?: object): void;
+  static reset?(routeArr: any[]): void;
+}

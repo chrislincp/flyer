@@ -5,6 +5,7 @@ import CardPage from './CardPage'
 import CarouselPage from './CarouselPage'
 import DialogPage from './DialogPage'
 import DragListPage from './DragListPage'
+import FoldedPanelPage from './FoldedPanelPage'
 import FormPage from './FormPage'
 
 export {
@@ -15,5 +16,6 @@ export {
   CarouselPage,
   DialogPage,
   DragListPage,
+  FoldedPanelPage,
   FormPage,
 }
