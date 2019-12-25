@@ -13,6 +13,7 @@ import {
 import { Button, GradientButton } from './Button'
 import { Card, LightCard, DetailCard } from './Card'
 import Carousel from './Carousel'
+import DataList from './DataList'
 import DefaultPage from './DefaultPage'
 import Dialog from './Dialog'
 import DragList from './DragList'
@@ -51,9 +52,10 @@ export {
   Button,
   GradientButton,
   Card,
+  Carousel,
+  DataList,
   LightCard,
   DetailCard,
-  Carousel,
   DefaultPage,
   Dialog,
   DragList,

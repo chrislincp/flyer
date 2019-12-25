@@ -164,6 +164,29 @@ export interface CarouselProps {
   children?: React.ReactNode;
 }
 
+export interface DataListProps {
+  refreshStyle?: any;
+  style?: any;
+  renderItem(): void;
+  renderFixedHeader?(): void;
+  renderHeader?(): void;
+  renderSeparator?(): void;
+  keyExtractor?(): void;
+  keyExtractor?(): void;
+  onEndReachedThreshold?: number
+  onScroll?(): void;
+  onStatus?(): void;
+  service(): void;
+  size?: number;
+  params?: object;
+  convertData?(): void;
+  mountLoad?: boolean
+  renderEmpty?(): void;
+  renderError?(): void;
+  renderOffline?(): void;
+  renderLoading?(): void;
+}
+
 export interface DefaultPageProps {
   title?: string;
   source?: any;
@@ -491,6 +514,8 @@ export class LightCard extends React.Component<LightCardProps> {}
 export class DetailCard extends React.Component<DetailCardProps> {}
 
 export class Carousel extends React.Component<CarouselProps> {}
+
+export class DataList extends React.Component<DataListProps> {}
 
 export class DefaultPage extends React.Component<DefaultPageProps> {}
 
