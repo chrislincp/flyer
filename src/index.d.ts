@@ -238,6 +238,10 @@ export interface DragListProps {
   onChange?(): void;
   renderRow?(): void;
 }
+export interface FoldedPanelProps {
+  title?: string;
+  children?: React.ReactNode;
+}
 
 export interface HeaderProps {
   height?: number;
@@ -526,6 +530,8 @@ export class Dialog extends React.Component<DialogProps> {
 }
 
 export class DragList extends React.Component<DragListProps> {}
+
+export class FoldedPanel extends React.Component<FoldedPanelProps> {}
 
 export class Form extends React.Component {
   static Base?: React.Component;

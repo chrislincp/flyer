@@ -17,6 +17,7 @@ import DataList from './DataList'
 import DefaultPage from './DefaultPage'
 import Dialog from './Dialog'
 import DragList from './DragList'
+import FoldedPanel from './FoldedPanel'
 import Form from './Form'
 import Header from './Header'
 import Image from './Image'
@@ -59,6 +60,7 @@ export {
   DefaultPage,
   Dialog,
   DragList,
+  FoldedPanel,
   Form,
   Header,
   Image,
