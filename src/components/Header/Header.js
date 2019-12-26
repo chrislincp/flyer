@@ -14,6 +14,7 @@ class Header extends Component {
     backgroundColor: PropTypes.string,
     style: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
+    titleStyle: PropTypes.any,
     centerStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
     left: PropTypes.node,
     leftStyle: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
@@ -32,6 +33,7 @@ class Header extends Component {
     backgroundColor: 'white',
     style: {},
     title: '',
+    titleStyle: null,
     centerStyle: {},
     left: null,
     leftStyle: {},
@@ -68,6 +70,7 @@ class Header extends Component {
       left,
       leftPress,
       title,
+      titleStyle,
       right,
       style,
       leftStyle,
@@ -93,7 +96,7 @@ class Header extends Component {
 
     const centerComponent =
       typeof title === 'string' ? (
-        <Text style={[Style.headerTitle, { color: fontColor }]} numberOfLines={1}>
+        <Text style={[Style.headerTitle, { color: fontColor }, titleStyle]} numberOfLines={1}>
           {title}
         </Text>
       ) : (
