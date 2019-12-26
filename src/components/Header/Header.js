@@ -57,6 +57,12 @@ class Header extends Component {
     this.opacity.setValue(value)
   }
 
+  getHeight() {
+    const paddingTop = ifAndroid(StatusBar.currentHeight, ifIphoneX(44, 24))
+    const { height } = this.props
+    return height + paddingTop
+  }
+
   render() {
     const {
       left,
