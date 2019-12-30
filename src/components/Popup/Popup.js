@@ -111,7 +111,7 @@ export default class Popup extends React.Component {
   }
 
   render() {
-    const { children, style, offset, position } = this.props
+    const { children, style, offset, position, ...props } = this.props
     const { visible, type } = this.state
     const modalStyleMap = {
       top: { justifyContent: 'flex-start' },
@@ -145,6 +145,7 @@ export default class Popup extends React.Component {
         style={[styles.container, modalStyleMap[position]]}
         animateWhenMount
         onClose={() => this._onClose()}
+        {...props}
       >
         <View style={[styles.content, style]}>{children}</View>
       </Modal>
