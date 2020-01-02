@@ -1,3 +1,4 @@
+import React from 'react'
 import {TextProps} from 'react-native'
 export interface ActionSheetProps {
   clear?: boolean;
@@ -507,6 +508,7 @@ export class PulseIndicator extends React.Component<PulseIndicatorProps> {}
 export class SkypeIndicator extends React.Component<SkypeIndicatorProps> {}
 export class NativeIndicator extends React.Component<NativeIndicatorProps> {}
 
+export class BottomView extends React.Component {}
 // button
 export class Button extends React.Component <ButtonProps> {}
 export class GradientButton extends React.Component <GradientButtonProps> {}

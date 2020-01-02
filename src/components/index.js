@@ -10,6 +10,7 @@ import {
   SkypeIndicator,
   NativeIndicator,
 } from './ActivityIndicator'
+import BottomView from './BottomView'
 import { Button, GradientButton } from './Button'
 import { Card, LightCard, DetailCard } from './Card'
 import Carousel from './Carousel'
@@ -50,6 +51,7 @@ export {
   PulseIndicator,
   SkypeIndicator,
   NativeIndicator,
+  BottomView,
   Button,
   GradientButton,
   Card,
