@@ -17,6 +17,7 @@ class ScrollTabBar extends React.Component {
     searchPress: PropTypes.func,
     right: PropTypes.node,
     styleLine: PropTypes.any,
+    left: PropTypes.node,
   }
 
   static defaultProps = {
@@ -27,6 +28,7 @@ class ScrollTabBar extends React.Component {
     searchPress: null,
     right: null,
     styleLine: null,
+    left: null,
   }
 
   constructor(props) {
@@ -51,7 +53,16 @@ class ScrollTabBar extends React.Component {
 
   render() {
     const { listPost } = this.state
-    const { scrollValue, tabs, activeTab, goToPage, searchPress, right, styleLine } = this.props
+    const {
+      scrollValue,
+      tabs,
+      activeTab,
+      goToPage,
+      searchPress,
+      right,
+      styleLine,
+      ...props
+    } = this.props
     const translateX = scrollValue.interpolate({
       inputRange: [0, 1],
       outputRange: [listPost[0], listPost[1]],
@@ -102,6 +113,7 @@ class ScrollTabBar extends React.Component {
             right || null
           )
         }
+        {...props}
       />
     )
   }
