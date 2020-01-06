@@ -44,7 +44,7 @@ export default class DataList extends React.Component {
     onEndReachedThreshold: 0.2,
     onScroll: null,
     onStatus: () => {},
-    size: 10,
+    size: 20,
     params: {},
     convertData: res => res.data,
     mountLoad: true,
