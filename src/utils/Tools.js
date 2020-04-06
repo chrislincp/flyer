@@ -42,3 +42,10 @@ export function cloneDeep(data) {
 export function isNumber(val) {
   return !Number.isNaN(Number(val))
 }
+
+export function appendZero(val) {
+  if (val < 10) {
+    return `0${val}`
+  }
+  return val
+}

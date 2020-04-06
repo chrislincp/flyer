@@ -188,6 +188,11 @@ export interface DataListProps {
   renderLoading?(): void;
 }
 
+
+export class DatePicker extends React.Component {
+  static show?(): void;
+}
+
 export interface DefaultPageProps {
   title?: string;
   source?: any;

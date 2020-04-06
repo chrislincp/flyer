@@ -15,6 +15,7 @@ import { Button, GradientButton } from './Button'
 import { Card, LightCard, DetailCard } from './Card'
 import Carousel from './Carousel'
 import DataList from './DataList'
+import DatePicker from './DatePicker'
 import DefaultPage from './DefaultPage'
 import Dialog from './Dialog'
 import DragList from './DragList'
@@ -57,6 +58,7 @@ export {
   Card,
   Carousel,
   DataList,
+  DatePicker,
   LightCard,
   DetailCard,
   DefaultPage,
