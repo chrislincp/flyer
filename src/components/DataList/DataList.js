@@ -58,6 +58,7 @@ export default class DataList extends React.Component {
     super(props)
     this.state = {
       data: [],
+      res: {},
       page: 1,
       refreshing: false,
       size: props.size,
@@ -158,7 +159,7 @@ export default class DataList extends React.Component {
   }
 
   reload(type = 'begin') {
-    const { data } = this.state
+    const { data, res } = this.state
     const { onStatus } = this.props
     this.setState(
       {
@@ -167,7 +168,7 @@ export default class DataList extends React.Component {
         status: type,
       },
       () => {
-        onStatus(type, type === 'begin' ? [] : data)
+        onStatus(type, type === 'begin' ? [] : data, res)
         this.getListData(type)
       },
     )
@@ -188,7 +189,7 @@ export default class DataList extends React.Component {
       .then(res => {
         const resData = convertData(res) || []
         if (page === 1) {
-          this.setState({ data: resData })
+          this.setState({ data: resData, res })
         } else {
           this.setState({
             data: data.concat(resData),
@@ -204,7 +205,7 @@ export default class DataList extends React.Component {
             status,
             loading: false,
           })
-          onStatus(status, resData)
+          onStatus(status, resData, res)
         }, 500)
 
         switch (type) {
