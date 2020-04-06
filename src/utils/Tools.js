@@ -1,3 +1,5 @@
+import dayjs from 'dayjs'
+
 export function typeOf(obj) {
   const { toString } = Object.prototype
   const map = {
@@ -48,4 +50,26 @@ export function appendZero(val) {
     return `0${val}`
   }
   return val
+}
+
+export function formatDate(time) {
+  if (
+    dayjs(time)
+      .add(2, 'days')
+      .isSame(dayjs(), 'day')
+  ) {
+    return `前天 ${dayjs(time).format('HH:mm')}`
+  }
+
+  if (
+    dayjs(time)
+      .add(1, 'days')
+      .isSame(dayjs(), 'day')
+  ) {
+    return `昨天 ${dayjs(time).format('HH:mm')}`
+  }
+  if (dayjs(time).isSame(dayjs(), 'day')) {
+    return `今天 ${dayjs(time).format('HH:mm')}`
+  }
+  return dayjs(time).format('YYYY-MM-DD HH:mm')
 }
