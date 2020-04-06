@@ -650,6 +650,8 @@ export function cloneDeep(para: any)
 
 export function isNumber(para: any)
 
+export function formatDate(para: any)
+
 export function isAndroid()
 
 export function isIos()
