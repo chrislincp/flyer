@@ -5,11 +5,13 @@ import { ifIphoneX } from '../../utils'
 
 export default class BottomView extends React.Component {
   static defaultProps = {
+    containerStyle: null,
     style: null,
     children: null,
   }
 
   static propTypes = {
+    containerStyle: PropTypes.any,
     style: PropTypes.any,
     children: PropTypes.node,
   }
@@ -19,9 +21,9 @@ export default class BottomView extends React.Component {
   }
 
   render() {
-    const { style, children } = this.props
+    const { containerStyle, style, children } = this.props
     return (
-      <View style={[styles.container]}>
+      <View style={[styles.container, containerStyle]}>
         <View style={[styles.content, style]}>{children}</View>
       </View>
     )
