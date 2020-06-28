@@ -127,7 +127,7 @@ export default class Input extends React.Component {
             styles.defaultText,
             styles.input,
             inputStyle,
-            { color: disabled ? Style.lightGray : Style.dark },
+            { color: disabled ? Style.lightGray : inputStyle.color || Style.dark },
           ]}
           placeholderTextColor={placeholderTextColor}
           clearButtonMode="never"
